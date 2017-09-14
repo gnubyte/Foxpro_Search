@@ -1,0 +1,89 @@
+__main__.AccpacTest.test_Hist_PO_Search (0.91s)
+.__main__.AccpacTest.test_Hist_SO_Search (7.52s)
+.__main__.AccpacTest.test_Item_Cost_Search (0.63s)
+.__main__.AccpacTest.test_Item_Search (0.69s)
+.__main__.AccpacTest.test_Item_Transaction_Search (2.43s)
+.__main__.AccpacTest.test_Open_PO_Search (0.14s)
+.__main__.AccpacTest.test_Open_SO_Search (0.55s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Address_Search (0.14s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Comments_Search (0.29s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Items_Search (0.13s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Search (0.19s)
+.__main__.AccpacTest.test_SAS (0.0s)
+.__main__.AccpacTest.test_Sales_Address_Search (0.38s)
+.__main__.AccpacTest.test_Sales_Comment_Search (0.55s)
+.__main__.AccpacTest.test_Sales_Header_Current (0.28s)
+.__main__.AccpacTest.test_Summary_Item_Search (3.47s)
+.__main__.AccpacTest.test_Summary_Sales_Order_Search (6.99s)
+.
+----------------------------------------------------------------------
+Ran 17 tests in 25.302s
+
+OK
+__main__.AccpacTest.test_Hist_PO_Search (0.88s)
+.__main__.AccpacTest.test_Hist_SO_Search (8.7s)
+.__main__.AccpacTest.test_Item_Cost_Search (0.84s)
+.__main__.AccpacTest.test_Item_Search (0.99s)
+.__main__.AccpacTest.test_Item_Transaction_Search (4.13s)
+.__main__.AccpacTest.test_Open_PO_Search (0.14s)
+.__main__.AccpacTest.test_Open_SO_Search (0.66s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Address_Search (0.12s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Comments_Search (0.19s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Items_Search (0.19s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Search (0.12s)
+.__main__.AccpacTest.test_SAS (0.0s)
+.__main__.AccpacTest.test_Sales_Address_Search (0.3s)
+.__main__.AccpacTest.test_Sales_Comment_Search (0.91s)
+.__main__.AccpacTest.test_Sales_Header_Current (0.3s)
+.__main__.AccpacTest.test_Summary_Item_Search (4.74s)
+.__main__.AccpacTest.test_Summary_Sales_Order_Search (5.61s)
+.
+----------------------------------------------------------------------
+Ran 17 tests in 28.841s
+
+OK
+__main__.AccpacTest.test_Hist_PO_Search (0.87s)
+.__main__.AccpacTest.test_Hist_SO_Search (6.79s)
+.__main__.AccpacTest.test_Item_Cost_Search (0.61s)
+.__main__.AccpacTest.test_Item_Search (0.89s)
+.__main__.AccpacTest.test_Item_Transaction_Search (1.05s)
+.__main__.AccpacTest.test_Open_PO_Search (0.14s)
+.__main__.AccpacTest.test_Open_SO_Search (0.53s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Address_Search (0.07s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Comments_Search (0.11s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Items_Search (0.13s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Search (0.1s)
+.__main__.AccpacTest.test_SAS (0.0s)
+.__main__.AccpacTest.test_Sales_Address_Search (0.16s)
+.__main__.AccpacTest.test_Sales_Comment_Search (0.26s)
+.__main__.AccpacTest.test_Sales_Header_Current (0.3s)
+.__main__.AccpacTest.test_Summary_Item_Search (3.45s)
+.__main__.AccpacTest.test_Summary_Sales_Order_Search (5.9s)
+.
+----------------------------------------------------------------------
+Ran 17 tests in 21.354s
+
+OK
+__main__.AccpacTest.test_Hist_PO_Search (0.89s)
+.__main__.AccpacTest.test_Hist_SO_Search (7.35s)
+.__main__.AccpacTest.test_Item_Cost_Search (0.63s)
+.__main__.AccpacTest.test_Item_Search (0.73s)
+.__main__.AccpacTest.test_Item_Transaction_Search (2.77s)
+.__main__.AccpacTest.test_Open_PO_Search (0.16s)
+.__main__.AccpacTest.test_Open_SO_Search (0.55s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Address_Search (0.14s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Comments_Search (0.3s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Items_Search (0.18s)
+.__main__.AccpacTest.test_Purchase_Order_Current_Search (0.13s)
+.__main__.AccpacTest.test_SAS (0.0s)
+.__main__.AccpacTest.test_Sales_Address_Search (0.33s)
+.__main__.AccpacTest.test_Sales_Comment_Search (0.61s)
+.__main__.AccpacTest.test_Sales_Header_Current (0.58s)
+.__main__.AccpacTest.test_Sales_Item_Search (0.97s)
+.__main__.AccpacTest.test_Summary_Item_Search (4.22s)
+.__main__.AccpacTest.test_Summary_Sales_Order_Search (6.56s)
+.
+----------------------------------------------------------------------
+Ran 18 tests in 27.120s
+
+OK

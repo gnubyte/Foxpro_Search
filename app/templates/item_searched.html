@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+<table>
+	<th>Item</th><th>Description</th><th>Quantity</th><th>Price</th><th>Commodity Code</th><th>Last Sale</th><th>Last Recieved</th><th>Last PO Placed</th>
+
+{% for row in results %}
+	<tr>
+		{% for field in row%}
+		<td id="{{field}}">{{field}}</td>
+
+		{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+<br><br>
+<!-- Item Cost-->
+<table>
+	<th>Item</th><th>Location</th><th>Cost Tier</th><th>QTY on hand</th><th>Cost</th><th>Add user</th>
+
+{% for row in itemc %}
+	<tr>
+		{% for field in row%}
+		<td id="{{field}}">{{field}}</td>
+
+		{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+
+<br><br>
+<!-- Item Location -->
+<table>
+	<th>Item</th><th>Location</th><th>Items on Hand</th><th>Items On Order</th><th>Order Point</th><th>Order Quantity</th><th>Last Sale</th><th>Last Received</th>
+
+{% for row in itemL %}
+	<tr>
+		{% for field in row%}
+		<td id="{{field}}">{{field}}</td>
+
+		{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+<!--End Item Location -->
+
+<style>
+/* TABLE STYLING */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+td {
+	background-color: #f2f2f2
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+/* END TABLE STYLING */
+</style>
+
+{% endblock %}

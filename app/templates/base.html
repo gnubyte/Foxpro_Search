@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+	<head>
+		  <title>{{ title }} Intranet</title>
+    	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style/style.css') }}">
+       <meta charset="UTF-8">
+      <meta name="description" content="Search engine">
+      <meta name="keywords" content="Metasearch, , Home">
+      <meta name="author" content="Patrick Hastings">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    </head>
+
+    <body>
+        <header>
+            <a href="/"><img src="{{url_for('static', filename='ms3logo1.jpg')}}" alt="logo"  height="60" width="70"></img></a>
+            <div class="container">
+              <div class="dropdown"><button class="dropbtn"><a href="/accounting" class="dropbtn>">Accounting</a></button></div>
+              <div class="dropdown"><button class="dropbtn"><a href="/hr" class="dropbtn>">Human Resources</a></button></div>
+              <div class="dropdown"><button class="dropbtn"><a href="/it" class="dropbtn>">IT</a></button></div>
+              <div class="dropdown"><button class="dropbtn"><a href="/sales" class="dropbtn>">Sales</a></button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div><!-- ends dropdown content-->
+              </div><!-- ends dropdown--> 
+              <div class="dropdown"><button class="dropbtn"><a href="/warehouse" class="dropbtn>">Warehouse</a></button></div>
+              </div>
+
+            <br>
+            <!-- Search Engine Tabs -->
+            <div class="tab">
+              <button class="tablinks" onclick="openSearchTab(event, 'Item')" id="defaultOpen">Item Search</button>
+              <button class="tablinks" onclick="openSearchTab(event, 'SO')">SO Search</button>
+              <button class="tablinks" onclick="openSearchTab(event, 'PO')">PO Search</button>
+			  <button class="tablinks" onclick="openSearchTab(event, 'PO')">Invoice Search</button>
+			  <button class="tablinks" onclick="openSearchTab(event, 'PO')">ProTrav Search</button>
+			  <button class="tablinks" onclick="openSearchTab(event, 'PO')">Location Search</button>
+            </div>
+            <!-- Begin Item tab -->
+            <div id="Item" class="tabcontent">
+
+              <form action="{{ url_for('item_searching') }}" method="GET">
+                 Part Number: <input type="text" name="field1" id="SearchNow"><br>
+                 Description: <input type="text" name="field2"><br>
+                 
+                 
+                  Commodity Code: <select name="field3" name='CommodCode' size='1'>
+                    {% for comcode in comcodes %}
+                     <option value='{{ comcode }}'> {{ comcode }}</option>
+                    {% endfor %}
+                  </select ><br>
+                  Greater than QTY: <input type="text" name="field4" value="0.5"><br>
+                  <input type="submit">
+              </form>
+              <button onclick="this.parentElement.style.display='none'"><b>Hide tab</b></button> 
+            </div>
+            <!-- End item -->
+            <!-- Begin SO -->
+            <div id="SO" class="tabcontent">
+
+              <form action="{{ url_for('item_searching') }}" method="GET">
+                 Sales Order Number: <input type="text" name="field1" id="SearchNow"><br>
+                  <input type="submit">
+              </form>
+              <button onclick="this.parentElement.style.display='none'"><b>Hide tab</b></button> 
+            </div>
+            <!-- End SO -->
+            <!-- Begin PO-->
+            <div id="PO" class="tabcontent">
+
+              <form action="{{ url_for('item_searching') }}" method="GET">
+                 Purchase Order Number: <input type="text" name="field1" id="SearchNow"><br>
+                  <input type="submit">
+              </form>
+              <button onclick="this.parentElement.style.display='none'"><b>Hide tab</b></button> 
+            </div>
+            <!-- End PO-->
+      </header>
+      <section>
+      {% block content %} {% endblock %}
+      </section>
+
+
+    </body>
+</html>
+
+
+
+<style>
+
+/* ----------------BEGIN BACKGROUND --------------- */
+/* BACKGROUND BEGIN */
+body {
+  background: #92c7d6;
+  background-image: -webkit-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+  background-image: -moz-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+  background-image: -o-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+  background-image: radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+}
+html, body { 
+  min-height: 100%; 
+}
+
+/* ----------------END BACKGROUND --------------- */
+/* ----------------BEGIN NAVIGATION --------------- */
+/*NAVIGATION: dropdowns */
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.search {
+    overflow: hidden;
+    background-color: #325;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    vertical-align: text-top;
+    color: white;
+    padding: 14px 16px;
+    /*background-color: inherit;*/
+    background-color: #333
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 1px 1px 7px rgba(0,0,0,.5);
+    animation-name: swingdown;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@keyframes swingdown {
+    0% {
+      opacity: .99999;
+      transform: rotateX(90deg);
+    }
+
+    30% {     
+      transform: rotateX(-20deg) rotateY(5deg);
+      animation-timing-function: ease-in-out;
+    }
+
+    65% {
+      transform: rotateX(20deg) rotateY(-3deg);
+      animation-timing-function: ease-in-out;
+    }
+
+    100% {
+      transform: rotateX(0);
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+
+/* ----------------END NAVIGATION --------------- */
+/* ----------------BEGIN SEARCH ------------------ */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* ------------------END SEARCH --------------------*/
+
+</style>
+<script>
+function openSearchTab(evt, SearchType) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(SearchType).style.display = "block";
+    evt.currentTarget.className += " active";
+    document.getElementById("SearchNow").focus();
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>

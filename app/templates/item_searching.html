@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<table>
+	<th>Item</th><th>Description</th><th>Quantity</th><th>Price</th><th>Commodity Code</th><th>Last Sale</th><th>Last Recieved</th><th>Last PO Placed</th>
+
+{% for row in results %}
+	<tr>
+		{% for field in row %}
+			{% if field[0] %}
+				<td id="{{field}}"><a href="/item_searched">{{field}} </a></td>
+			{% else %}
+				<td id="{{field}}">{{field}}</td>
+			{% endif %}	
+		{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+<style>
+/* TABLE STYLING */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+/* END TABLE STYLING */
+</style>
+{% endblock %}
