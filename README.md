@@ -6,6 +6,7 @@ This is no longer a maintained project. The search engine logic is valid for any
 
 ## Status: Discontinued
 This is a visual foxpro 7.0 search engine intended for the ERP: Accpac.
+This project remains open to the public for anyone who is still using Visual Foxpro in production, and also to showcase some concepts that I can implement.
 
 
 ## Frameworks:
